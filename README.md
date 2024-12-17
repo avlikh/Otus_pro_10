@@ -454,8 +454,8 @@ sed -i   '/^ \+server \x7B/a\
 Строка начинается с одного или более пробелов, далее фраза: server {
 (\x7B - код символа '{'  ) (подробнее о символах ASCII смотрим тут: https://klondike-studio.ru/blog/sed-spetssimvoly/)
 и добавляем после найденной строки следующие строки:
-        index index.html index.htm;\
-        autoindex on;' /etc/nginx/nginx.conf
+        index index.html index.htm;
+        autoindex on;
 ```
 </details>
 
