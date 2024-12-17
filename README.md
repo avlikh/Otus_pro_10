@@ -166,6 +166,7 @@ cmake --build . --config Release -j 2 --target brotlienc
 </details>
 
 Далее, нужно поправить сам spec файл, чтобы Nginx собирался с необходимыми нам опциями: находим секцию с параметрами **configure** ( ***if ! ./configure \*** ) (**до условий %if**) и добавляем указание на модуль (не забудьте указать завершающий обратный слэш): ***--add-module=/root/ngx_brotli \***    
+Сделаем это одной командой:
 
 ```
 sed -i '/\x2E\x2Fconfigure/a\--add-module=/root/ngx_brotli \\'  ~/rpmbuild/SPECS/nginx.spec
